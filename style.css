@@ -64,6 +64,12 @@ header .header-nav .login .white-btn {
 header .header-content {
     padding-left: 150px;
     padding-bottom: 103px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header .header-content .left-column {
+    max-width: 555px;
 }
 
 header .header-content h1 {
@@ -72,8 +78,8 @@ header .header-content h1 {
     font: normal normal 500 50px/70px "Rubik";
 }
 
-header .header-content .bold {
-    font-weight: 600;
+header .header-content h1 .bold {
+    font-weight: 700;
 }
 
 header .header-content .caption {
@@ -82,7 +88,11 @@ header .header-content .caption {
     color: #4F5665;
 }
 
-header .header-content .red-btn {
+header .header-content .caption .bold {
+    font: normal normal 500 16px/30px "Rubik";
+}
+
+.red-btn {
     width: 250px;
     padding: 18px 0;
     font: normal normal 700 16px/25px "Rubik";
@@ -90,6 +100,7 @@ header .header-content .red-btn {
     color: #ffffff;
     background: #F53838;
     border-radius: 10px;
+    box-shadow: 0 33px 54px -15px rgba(245, 56, 56, 0.6);
 }
 
 header .header-content .img-container {
@@ -99,8 +110,11 @@ header .header-content .img-container {
 }
 
 .stats {
-    padding: 0 150px 67px;
+    margin: 0 150px;
+    padding: 67.5px 0;
     justify-content: center;
+    box-shadow: 0 65px 129px -33px rgba(13, 16, 37, 0.06);
+    border-radius: 10px;
 }
 
 .stats .stats-card {
@@ -133,11 +147,13 @@ header .header-content .img-container {
 
 .advantages {
     padding: 54px 150px 131px 184px;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .advantages .advantages-list {
     margin-top: 53px;
+    margin-left: 170px;
     width: 430px;
 }
 
@@ -251,6 +267,7 @@ header .header-content .img-container {
 .plan .items-row .plan-card .red-rounded-btn {
     color: white;
     background-color: #F53838;
+    box-shadow: 0 25px 54px -17px rgba(245, 56, 56, 1);
 }
 
 .location {
@@ -266,7 +283,7 @@ header .header-content .img-container {
 
 .location .caption {
     width: 555px;
-    margin-bottom: 155px;
+    margin-bottom: 60px;
     font: normal normal 400 16px/30px "Rubik";
     color: #4F5665;
 }
@@ -298,6 +315,136 @@ header .header-content .img-container {
     margin-right: 50px;
 }
 
-.comment-section {
+.comment-section .title-column {
+    text-align: center;
+    align-items: center;
+}
+
+.comment-section .title {
+    margin-bottom: 20px;
+    font: normal normal 500 35px/50px "Rubik";
+}
+
+.comment-section .caption {
+    width: 555px;
+    margin-bottom: 60px;
+    font: normal normal 400 16px/30px "Rubik";
+    color: #4F5665;
+}
+
+.comment-section .card-section {
     margin-left: 150px;
+    margin-bottom: 60px;
+    justify-content: flex-end;
+}
+
+.comment-section .card-section .comment-card {
+    width: 400px;
+    margin-right: 50px;
+    padding: 30px;
+    border: 2px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.comment-section .comment-card:last-of-type {
+    margin-right: 0;
+}
+
+.comment-section .comment-card.active {
+    border-color: #F53838;
+    box-shadow: 0 66px 129px -35px rgba(13, 16, 37, 0.1);
+}
+
+.comment-section .comment-card .user-row {
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.comment-section .comment-card .user-avatar {
+    margin-right: 20px;
+}
+
+.comment-section .comment-card .name-location {
+    flex: 1;
+}
+
+.comment-section .comment-card .user-name {
+    font: normal normal 500 18px/18px "Rubik";
+}
+
+.comment-section .comment-card .user-location {
+    margin-top: 5px;
+    font: normal normal 400 14px/14px "Rubik";
+    color: #4F5665;
+}
+
+.comment-section .comment-card .rating-row {
+    align-items: center;
+}
+
+.comment-section .comment-card .rating {
+    margin-right: 10px;
+    font: normal normal 400 16px/16px "Rubik";
+}
+
+.comment-section .comment-card .comment {
+    font: normal normal 400 16px/30px "Rubik";
+}
+
+.comment-section .switch-panel {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 182px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-section .switch-panel .left img {
+    margin-right: 15px;
+}
+
+.comment-section .switch-panel .right .arrow-left {
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.comment-section .switch-panel .right .arrow-right {
+    cursor: pointer;
+    position: relative;
+    width: 60px;
+    height: 61px;
+    overflow: hidden;
+}
+
+.comment-section .switch-panel .right .arrow-right img {
+    position: absolute;
+    top: -30px;
+    left: -44px;
+}
+
+footer {
+    background: #F8F8F8;
+}
+
+footer .subscribe {
+    margin: 0 150px;
+    padding: 58.5px 70px;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 65px 129px -33px rgba(13, 16, 37, 0.06);
+    transform: translateY(-121px);
+}
+
+footer .subscribe .title {
+    margin-bottom: 20px;
+    font: normal normal 500 35px/45px "Rubik";
+    width: 370px;
+}
+
+footer .subscribe .caption {
+    font: normal normal 400 16px/30px "Rubik";
+    color: #4F5665;
 }
