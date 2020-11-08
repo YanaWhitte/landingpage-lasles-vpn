@@ -69,12 +69,12 @@ header .header-nav .login .white-btn {
 header .header-content {
     padding-left: 150px;
     padding-bottom: 103px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
 }
 
 header .header-content .left-column {
-    max-width: 555px;
+    max-width: 705px;
 }
 
 header .header-content h1 {
@@ -110,7 +110,7 @@ header .header-content .caption .bold {
 
 header .header-content .img-container {
     margin-top: 93px;
-    margin-right: 83px;
+    margin-right: 150px;
     margin-left: 40px;
 }
 
@@ -477,7 +477,7 @@ footer .column {
 }
 
 footer .logo-column {
-    flex: 1;
+    flex: 4;
     padding-left: 150px;
     width: 340px;
 }
@@ -538,7 +538,8 @@ footer .logo-column .copyright .bold {
 }
 
 footer .menu-list {
-    margin-right: 125px;
+    margin-right: 50px;
+    flex: 1;
 }
 
 footer .menu-list:last-of-type {
