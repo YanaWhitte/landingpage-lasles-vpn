@@ -34,6 +34,10 @@ header .header-nav {
   align-items: center;
 }
 
+header .header-nav .logo {
+  display: flex;
+}
+
 header .header-nav .main-nav a {
   margin-right: 35px;
   font: normal normal 400 16px/19px "Rubik";
@@ -182,6 +186,7 @@ header .header-content .img-container {
 
 .advantages .advantages-list .item .check {
   margin-right: 11px;
+  margin-bottom: 3px;
 }
 
 .plan {
@@ -219,10 +224,14 @@ header .header-content .img-container {
   box-sizing: border-box;
   border-radius: 10px;
   align-items: center;
+  transition: all 0.5s ease;
 }
 
 .plan .items-row .plan-card:last-child {
   margin-right: 0;
+}
+
+.plan .items-row .plan-card.active-card {
   border: 2px solid #f53838;
 }
 
@@ -249,6 +258,7 @@ header .header-content .img-container {
   content: "";
   display: inline-block;
   margin-right: 20px;
+  margin-bottom: 2px;
   vertical-align: middle;
   width: 24px;
   height: 24px;
@@ -264,18 +274,28 @@ header .header-content .img-container {
   font: normal normal 400 25px/30px "Rubik";
 }
 
-.plan .items-row .plan-card .white-btn {
+.plan .items-row .plan-card .select-btn {
   padding: 13px 63px;
   font: normal normal 700 16px/19px "Rubik";
   color: #f53855;
   border: 2px solid #f53855;
   box-sizing: border-box;
   border-radius: 50px;
+  transition: all 0.5s ease;
 }
 
-.plan .items-row .plan-card .red-rounded-btn {
+.plan .items-row .plan-card .select-btn:hover {
+  box-shadow: 0 22px 54px -18px rgba(245, 56, 56, 0.4);
+  transition: all 0.3s ease;
+}
+
+.plan .items-row .active-card .active-btn {
   color: white;
   background-color: #f53838;
+  box-shadow: 0 25px 54px -17px rgba(245, 56, 56, 1);
+}
+
+.plan .items-row .active-card .active-btn:hover {
   box-shadow: 0 25px 54px -17px rgba(245, 56, 56, 1);
 }
 
@@ -412,6 +432,10 @@ header .header-content .img-container {
 .comment-section .comment-card .rating {
   margin-right: 10px;
   font: normal normal 400 16px/16px "Rubik";
+}
+
+.comment-section .comment-card .rating-star {
+  margin-bottom: 1.5px;
 }
 
 .comment-section .comment-card .comment {
