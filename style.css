@@ -599,12 +599,15 @@ header .header-content .graph .graph-3 {
   border-radius: 8px;
   background-color: #f53838;
   transition: left 0.44s ease-out;
+  margin-left: 1px;
 }
 
 .comment-section .switch-panel .left img {
   margin-right: 15px;
 }
-
+.comment-section .switch-panel .left img:last-child {
+  margin: 0;
+}
 .comment-section .switch-panel .right .arrow-left {
   cursor: pointer;
   margin-right: 20px;

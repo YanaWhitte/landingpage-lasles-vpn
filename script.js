@@ -55,9 +55,9 @@ $(function () {
     resetChildrenActiveClasses();
     try {
       carouselChildren[currentIndex].classList.add("active");
-      switcher.style.left = `${Math.floor(
-        (currentIndex / commentsNumber) * 100
-      )}%`;
+      switcher.style.left = ["0%", "28%", "58%"][
+        Math.floor((currentIndex / commentsNumber) * 3)
+      ];
     } catch (e) {}
   });
 }
