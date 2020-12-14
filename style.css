@@ -110,12 +110,92 @@ header .header-content .caption .bold {
   background: #f53838;
   border-radius: 10px;
   box-shadow: 0 33px 54px -15px rgba(245, 56, 56, 0.6);
+  transition: all 0.5s ease;
+}
+
+.red-btn:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
 }
 
 header .header-content .img-container {
+  position: relative;
   margin-top: 93px;
   margin-right: 150px;
   margin-left: 40px;
+}
+
+header .header-content .ill-icons,
+header .header-content .graph {
+  position: absolute;
+}
+
+header .header-content .lock-icon {
+  top: 0;
+  left: 14.6px;
+  animation: translate 1.4s linear infinite;
+}
+
+header .header-content .play-icon {
+  top: 0;
+  right: 213.5px;
+  animation: translate 1.3s linear infinite;
+}
+
+header .header-content .en-icon {
+  top: 134px;
+  left: 68.6px;
+  animation: translate 1.5s linear infinite;
+}
+
+@keyframes translate {
+  50% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+header .header-content .graph {
+  padding-bottom: 37.5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 112.92px;
+  height: 82.37px;
+  top: 66.1px;
+  right: 63px;
+  background: url("img/Ill-icon4.0.png") no-repeat center;
+}
+
+header .header-content .graph img {
+  margin-right: 8px;
+}
+
+header .header-content .graph .graph-1 {
+  transform-origin: center bottom;
+  animation: scale 1.5s 300ms linear infinite;
+}
+
+header .header-content .graph .graph-2 {
+  transform-origin: center bottom;
+  animation: scale 1.5s 500ms linear infinite;
+}
+
+header .header-content .graph .graph-3 {
+  margin-right: 0;
+  transform-origin: center bottom;
+  animation: scale 1.5s 700ms linear infinite;
+}
+
+@keyframes scale {
+  50% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.3);
+  }
 }
 
 .stats {
@@ -158,6 +238,56 @@ header .header-content .img-container {
   padding: 54px 150px 131px 184px;
   justify-content: space-around;
   align-items: center;
+}
+
+.advantages .img-container {
+  position: relative;
+}
+
+.advantages .img-container .heart {
+  position: absolute;
+}
+
+.advantages .img-container .heart-1 {
+  top: 69px;
+  left: 174px;
+  opacity: 0;
+  animation: opacity 2s 100ms linear infinite;
+}
+
+.advantages .img-container .heart-2 {
+  top: 46px;
+  left: 254px;
+  opacity: 0;
+  animation: opacity 2s 300ms linear infinite;
+}
+
+.advantages .img-container .heart-3 {
+  top: 28px;
+  left: 209px;
+  opacity: 0;
+  animation: opacity 2s 500ms linear infinite;
+}
+.advantages .img-container .heart-4 {
+  top: 10px;
+  left: 243px;
+  opacity: 0;
+  animation: opacity 2s 700ms linear infinite;
+}
+.advantages .img-container .heart-5 {
+  top: 0;
+  left: 187px;
+  opacity: 0;
+  animation: opacity 2s 900ms linear infinite;
+}
+
+@keyframes opacity {
+  50% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .advantages .advantages-list {
@@ -287,6 +417,7 @@ header .header-content .img-container {
 .plan .items-row .plan-card .select-btn:hover {
   box-shadow: 0 22px 54px -18px rgba(245, 56, 56, 0.4);
   transition: all 0.3s ease;
+  transform: scale(1.05);
 }
 
 .plan .items-row .active-card .active-btn {
@@ -297,6 +428,7 @@ header .header-content .img-container {
 
 .plan .items-row .active-card .active-btn:hover {
   box-shadow: 0 25px 54px -17px rgba(245, 56, 56, 1);
+  transform: scale(1);
 }
 
 .location {
@@ -379,13 +511,18 @@ header .header-content .img-container {
 }
 
 .comment-section .card-section {
-  margin-left: 150px;
+  padding-left: 150px;
   margin-bottom: 60px;
   justify-content: flex-end;
+  box-sizing: border-box;
+  /** For the box shadow fix */
+  overflow: hidden;
+  padding-bottom: 100px;
 }
 
 .comment-section .card-section .comment-card {
   width: 400px;
+  height: 250px;
   margin-right: 50px;
   padding: 30px;
   border: 2px solid #dddddd;
@@ -400,6 +537,7 @@ header .header-content .img-container {
 .comment-section .comment-card.active {
   border-color: #f53838;
   box-shadow: 0 66px 129px -35px rgba(13, 16, 37, 0.1);
+  transition: box-shadow 0.3s cubic-bezier(0.5, 0.07, 0.38, 0.99);
 }
 
 .comment-section .comment-card .user-row {
@@ -443,11 +581,24 @@ header .header-content .img-container {
 }
 
 .comment-section .switch-panel {
-  margin-left: 150px;
-  margin-right: 150px;
-  margin-bottom: 182px;
+  margin: -100px 150px 182px 150px;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 500;
+}
+
+.comment-section .switch-panel .left {
+  position: relative;
+}
+
+.comment-section .switch-panel .left .active {
+  position: absolute;
+  width: 48px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: #f53838;
+  transition: left 0.44s ease-out;
 }
 
 .comment-section .switch-panel .left img {
@@ -595,3 +746,26 @@ footer .menu-list .menu-item a {
 footer .menu-list .menu-item a:hover {
   text-decoration: underline;
 }
+
+/** Here goes my changes */
+.owl-carousel .owl-item img.user-avatar {
+  display: block;
+  width: 50px;
+}
+
+#js-carousel-1 .owl-stage-outer {
+  overflow: visible;
+}
+/* 
+.carousel-item {
+  border: 1px solid black;
+  background: #EEEEEE;
+  font-size: 23px;
+  padding: 100px 20px;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: grab;
+  position: relative;
+  height: 230px;
+  overflow-wrap: break-word;
+} */
