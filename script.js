@@ -6,16 +6,23 @@ myButtons.forEach((button) => {
 });
 
 // Card switcher
+
 $(function () {
   $(".plan-card").click(function () {
-    // $(this).toggleClass("active-card");
     $(".plan-card").removeClass("active-card");
     $(this).addClass("active-card");
   });
 });
 
-// Comments slider
+// Map
 
+fetch("icn/map-dots.svg")
+  .then((x) => x.text())
+  .then((text) => {
+    document.getElementById("map-target").innerHTML = text;
+  });
+
+// Comments slider
 // clone children
 {
   const carouselContainer = document.getElementById("js-carousel-1");

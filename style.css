@@ -759,16 +759,3 @@ footer .menu-list .menu-item a:hover {
 #js-carousel-1 .owl-stage-outer {
   overflow: visible;
 }
-/* 
-.carousel-item {
-  border: 1px solid black;
-  background: #EEEEEE;
-  font-size: 23px;
-  padding: 100px 20px;
-  text-align: center;
-  box-sizing: border-box;
-  cursor: grab;
-  position: relative;
-  height: 230px;
-  overflow-wrap: break-word;
-} */
