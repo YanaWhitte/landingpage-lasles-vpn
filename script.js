@@ -1,21 +1,20 @@
 // Disable buttons
-
 const myButtons = document.querySelectorAll(".btn");
 myButtons.forEach((button) => {
   button.addEventListener("click", (event) => event.preventDefault());
 });
 
 // Card switcher
-
-$(function () {
-  $(".plan-card").click(function () {
-    $(".plan-card").removeClass("active-card");
-    $(this).addClass("active-card");
+document.querySelectorAll(".plan-card").forEach((e) => {
+  e.addEventListener("click", () => {
+    document.querySelectorAll(".plan-card").forEach((e) => {
+      e.classList.remove("active-card");
+    });
+    e.classList.add("active-card");
   });
 });
 
 // Map
-
 fetch("icn/map-dots.svg")
   .then((x) => x.text())
   .then((text) => {
@@ -23,7 +22,6 @@ fetch("icn/map-dots.svg")
   });
 
 // Comments slider
-// clone children
 {
   const carouselContainer = document.getElementById("js-carousel-1");
   const carouselChildren = Array.from(carouselContainer.children);
